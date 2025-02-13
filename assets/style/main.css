@@ -31,8 +31,6 @@
 
   --footer-bg-color: #131313;
 }
-
-/* Header style */
 header {
   position: sticky;
   top: 0;
@@ -41,9 +39,10 @@ header {
   height: 80px;
   display: flex;
   background-color: var(--primary-back-color-header);
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   z-index: 999;
+  gap: 183px;
   > .logo {
     > p {
       font-weight: 600;
@@ -104,10 +103,26 @@ header {
   > .bars {
     display: none;
   }
+  > .lang-btn {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--dot-bg-color);
+    transition: 0.4s ease;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--pfp-bg-shadow);
+      color: var(--primary-color);
+    }
+  }
 }
 
 /* Body style */
 body {
+  /* Header style */
+
   background: var(--primary-back-color-bg);
 
   > .hero {
@@ -390,7 +405,7 @@ body {
         > .service {
           width: 500px;
           height: 180px;
-          padding-top: 50px;
+          padding-top: 20px;
           padding-left: 20px;
           background-color: var(--pfp-bg-shadow);
           border-radius: 20px;
@@ -404,6 +419,7 @@ body {
             width: 400px;
             font-size: 10px;
             max-width: 100%;
+            padding-top: 20px;
           }
           &:hover {
             cursor: pointer;
@@ -583,7 +599,7 @@ body {
 
 /* Footer style */
 footer {
-  height: 160px;
+  height: 180px;
   width: 100%;
   background-color: var(--footer-bg-color);
   > .social-medias-icons {
