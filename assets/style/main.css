@@ -34,14 +34,15 @@
 
 /* Header style */
 header {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
   display: flex;
   background-color: var(--primary-back-color-header);
-  width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 580px;
   z-index: 999;
   > .logo {
     > p {
@@ -100,22 +101,23 @@ header {
       bottom: 0;
     }
   }
+  > .bars {
+    display: none;
+  }
 }
 
 /* Body style */
 body {
   background: var(--primary-back-color-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 150px;
+
   > .hero {
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 1370px;
+    height: 600px;
     > .leftPart {
-      margin-top: 80px;
       > .name-title {
         padding-bottom: 10px;
         > h1 {
@@ -130,6 +132,27 @@ body {
       > .job-title {
         color: var(--primary-color);
         padding-bottom: 10px;
+        min-width: 280px;
+        > h2 {
+          > span {
+            position: relative;
+            &::before {
+              content: "Web Developer";
+              color: var(--second-color);
+              animation: words 50s infinite;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: calc(100% + 8px);
+              background-color: black;
+              height: 100%;
+              border-left: 3px solid var(--second-color);
+              right: -8px;
+              animation: blink 0.6s infinite, typing 10s steps(14) infinite;
+            }
+          }
+        }
       }
       > .desc-about-me {
         color: var(--primary-color);
@@ -188,7 +211,6 @@ body {
       }
     }
     > .rightPart {
-      margin-top: 150px;
       > img {
         border-radius: 100%;
         height: 420px;
@@ -202,13 +224,14 @@ body {
     }
   }
   > .education {
-    width: 1422px;
-    height: 1100px;
+    width: 100%;
+    height: 1200px;
     background-color: #131313;
     position: relative;
+    margin: 0 auto;
     > h1 {
       text-align: center;
-      margin-top: 30px;
+      padding-top: 50px;
       margin-bottom: 80px;
       color: var(--primary-color);
       font-size: var(--section-title-font-size);
@@ -344,11 +367,12 @@ body {
   }
   .services {
     width: 100%;
+    height: 650px;
     > h1 {
       text-align: center;
       color: var(--primary-color);
       font-size: var(--section-title-font-size);
-      margin-top: -70px;
+      margin-top: 70px;
       margin-bottom: 40px;
     }
     > .my-services {
@@ -393,13 +417,15 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 800px;
     width: 100%;
-    gap: 150px;
+    height: 100%;
+    gap: 450px;
+
     background-color: var(--testimonials-bg-color);
     > h1 {
       text-align: center;
       padding-top: 50px;
+      margin-bottom: -320px;
       font-size: var(--section-title-font-size);
       color: var(--primary-color);
     }
@@ -407,6 +433,8 @@ body {
       width: 100%;
       max-width: 1200px;
       display: flex;
+      height: 100%;
+      margin-bottom: 120px;
       justify-content: center;
       overflow: hidden;
       .swiper-wrapper {
@@ -454,6 +482,11 @@ body {
     }
   }
   .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
     > h1 {
       color: white;
       font-size: var(--section-title-font-size);
@@ -597,5 +630,234 @@ footer {
     font-weight: 300;
     font-size: 12px;
     color: var(--primary-color);
+  }
+}
+
+/* Cursor animations */
+
+@keyframes blink {
+  to {
+    border-left: 2px solid var(--second-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Front-end Developer";
+  }
+  21%,
+  40% {
+    content: "UX / UI Designer";
+  }
+  41%,
+  60% {
+    content: "Enterpreneur";
+  }
+  61%,
+  80% {
+    content: "IT Project Manager";
+  }
+  81%,
+  100% {
+    content: "IT Student";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  70%,
+  75%,
+  90% {
+    width: 0;
+  }
+  5%,
+  20%,
+  40%,
+  45%,
+  60%,
+  65%,
+  90%,
+  85% {
+    width: calc(100%+ 8px);
+  }
+}
+
+/* Responsive design */
+
+@media (max-width: 480px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > .navLinks {
+      display: none;
+    }
+    > .bars {
+      display: block;
+      font-size: 22px;
+      color: var(--dot-bg-color);
+    }
+  }
+  body {
+    /* overflow-x: hidden; */
+    .hero {
+      flex-direction: column-reverse;
+      width: 100%;
+      height: 700px;
+      margin-top: 124px;
+      > .leftPart {
+        > .name-title {
+          text-align: left;
+          padding-left: 20px;
+          > h1 {
+            font-size: 40px;
+            padding-top: 40px;
+          }
+        }
+        > .job-title {
+          margin-top: -15px;
+          text-align: left;
+          font-size: 12px;
+          padding-left: 22px;
+        }
+        > .desc-about-me {
+          text-align: left;
+          padding-left: 20px;
+          font-size: 11px;
+          max-width: 400px;
+          width: 100%;
+        }
+        > .social-medias-icons {
+          padding-left: 18px;
+        }
+        > .hero-buttons {
+          padding-left: 17px;
+        }
+      }
+      > .rightPart {
+        > img {
+          height: 280px;
+          width: 280px;
+          box-shadow: 0px 0px 20px var(--pfp-bg-shadow);
+          &:hover {
+            box-shadow: 0px 0px 40px var(--pfp-bg-shadow);
+          }
+        }
+      }
+    }
+    .education {
+      position: relative;
+      .base-line {
+        position: absolute;
+        left: 20px;
+      }
+      .dot {
+        position: absolute;
+        left: 13px;
+        top: 260px;
+      }
+      .first {
+        top: 400px;
+      }
+      .second {
+        top: 650px;
+      }
+      .fourth {
+        top: 880px;
+      }
+      .university,
+      .texnoera,
+      .turing,
+      .matrix {
+        position: absolute;
+        left: 40px;
+        text-align: left;
+      }
+      .turing {
+        margin-top: -60px;
+      }
+      .matrix {
+        margin-top: -30px;
+      }
+    }
+    .services {
+      height: 700px;
+      width: 100%;
+      margin-top: 120px;
+      > h1 {
+        font-size: 25px;
+      }
+      > .my-services {
+        flex-direction: column;
+        > .row {
+          flex-direction: column;
+          > .service {
+            padding-left: 10px;
+            padding-top: 20px;
+            width: 400px;
+            /* height: 150px; */
+          }
+        }
+      }
+    }
+    .testimonials {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > .swiper {
+        margin: -120px auto;
+        > .swiper-wrapper {
+          height: 500px;
+        }
+      }
+    }
+    .contact {
+      height: 1300px;
+      width: 100%;
+      margin: 200px auto;
+      > .map {
+        > iframe {
+          width: 400px;
+          height: 200px;
+        }
+      }
+      > form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > .leftPart {
+          > input {
+            width: 400px;
+          }
+        }
+        > .rightPart {
+          > textarea {
+            margin: 0 auto;
+            min-width: 400px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 30px 0;
+    > .swiper {
+      > .swiper-wrapper {
+        height: auto;
+      }
+    }
   }
 }
