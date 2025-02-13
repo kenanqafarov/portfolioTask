@@ -15,6 +15,8 @@
 /* Root part */
 
 :root {
+  /* Dark mode */
+
   --primary-back-color-bg: #080808;
   --primary-back-color-header: #080808d2;
   --primary-color: white;
@@ -28,8 +30,23 @@
   --testimonials-bg-color: #131313;
   --star-color: yellow;
   --testimonials-element-bg-color: #060606;
-
   --footer-bg-color: #131313;
+
+  /* Light mode */
+  --light-primary-back-color-bg: #f9f9f9;
+  --light-primary-back-color-header: #ffffffd2;
+  --light-primary-color: #080808;
+  --light-second-color: #00bfa5;
+  --light-hire-me-btn-color: #e0f2f1;
+  --light-pfp-bg-shadow: #00bfa5;
+  --light-dot-bg-color: #00bfa5;
+  --light-desc-color: #5f5f5f;
+  --light-section-title-font-size: 44px;
+  --light-service-element-bg: #e0f7fa;
+  --light-testimonials-bg-color: #ffffff;
+  --light-star-color: #ffb400;
+  --light-testimonials-element-bg-color: #f5f5f5;
+  --light-footer-bg-color: #ececec;
 }
 header {
   position: sticky;
@@ -39,10 +56,10 @@ header {
   height: 80px;
   display: flex;
   background-color: var(--primary-back-color-header);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 999;
-  gap: 183px;
+  gap: 3px;
   > .logo {
     > p {
       font-weight: 600;
@@ -103,18 +120,39 @@ header {
   > .bars {
     display: none;
   }
-  > .lang-btn {
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    padding: 7px 10px;
-    border-radius: 10px;
-    border: 1px solid var(--dot-bg-color);
-    transition: 0.4s ease;
-    &:hover {
-      cursor: pointer;
-      background-color: var(--pfp-bg-shadow);
-      color: var(--primary-color);
+
+  > .rightPart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    > .lang-btn {
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--dot-bg-color);
+      transition: 0.4s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--pfp-bg-shadow);
+        color: var(--primary-color);
+      }
+    }
+    > i {
+      font-size: 18px;
+      color: white;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--dot-bg-color);
+      transition: 0.4s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--pfp-bg-shadow);
+        color: var(--primary-color);
+      }
     }
   }
 }
@@ -124,6 +162,7 @@ body {
   /* Header style */
 
   background: var(--primary-back-color-bg);
+  transition: 0.6s ease;
 
   > .hero {
     margin: 0 auto;
@@ -590,6 +629,217 @@ body {
           &:hover {
             cursor: pointer;
             box-shadow: 1px 1px 20px var(--pfp-bg-shadow);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Dark mode style */
+.dark {
+  background: var(--light-primary-back-color-bg);
+  > .hero {
+    > .leftPart {
+      > .name-title {
+        > h1 {
+          color: var(--light-primary-color);
+          > span {
+            color: var(--light-second-color);
+            text-shadow: 1px 1px 20px var(--light-second-color);
+          }
+        }
+      }
+      > .job-title {
+        color: var(--light-primary-color);
+        > h2 {
+          > span {
+            &::before {
+              color: var(--light-second-color);
+            }
+            &::after {
+              border-left: 3px solid var(--light-second-color);
+            }
+          }
+        }
+      }
+      > .desc-about-me {
+        color: var(--light-primary-color);
+      }
+      > .social-medias-icons {
+        color: var(--light-second-color);
+        > a {
+          color: var(--light-second-color);
+          > i {
+            border: 1px solid var(--light-second-color);
+            &:hover {
+              background-color: var(--light-second-color);
+              color: var(--light-primary-color);
+            }
+          }
+        }
+      }
+      > .hero-buttons {
+        > .hire-btn {
+          background-color: var(--light-second-color);
+          color: var(--light-hire-me-btn-color);
+          border: 1px solid var(--light-second-color);
+          box-shadow: 1px 1px 20px var(--light-second-color);
+        }
+        > .contact-btn {
+          color: var(--light-second-color);
+          border: 1px solid var(--light-second-color);
+          &:hover {
+            background-color: var(--light-second-color);
+            color: var(--light-hire-me-btn-color);
+          }
+        }
+      }
+    }
+    > .rightPart {
+      > img {
+        box-shadow: 0px 0px 60px var(--light-pfp-bg-shadow);
+        &:hover {
+          box-shadow: 0px 0px 120px var(--light-pfp-bg-shadow);
+        }
+      }
+    }
+  }
+  > .education {
+    background-color: #131313;
+    > h1 {
+      color: var(--light-primary-back-color-bg);
+      font-size: var(--light-section-title-font-size);
+    }
+    > .base-line {
+      background-color: var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+    }
+    > .dot {
+      background-color: var(--light-dot-bg-color);
+    }
+    > .university {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .texnoera {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .turing {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .matrix {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+  }
+  .services {
+    > h1 {
+      color: var(--light-primary-color);
+      font-size: var(--light-section-title-font-size);
+    }
+    > .my-services {
+      > .row {
+        > .service {
+          background-color: var(--light-pfp-bg-shadow);
+          border: 3px solid var(--light-pfp-bg-shadow);
+          &:hover {
+            cursor: pointer;
+            background-color: var(--light-footer-bg-color);
+          }
+        }
+      }
+    }
+  }
+  .testimonials {
+    background-color: #131313;
+    > h1 {
+      font-size: var(--light-section-title-font-size);
+      color: var(--light-primary-back-color-bg);
+    }
+    .swiper {
+      .swiper-slide {
+        border: 1px solid var(--light-desc-color);
+        background-color: var(--light-testimonials-element-bg-color);
+        > img {
+          border: 2px solid var(--light-second-color);
+          box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+        }
+        > .reviewer-name {
+          color: var(--light-primary-color);
+        }
+        > .stars {
+          color: var(--light-star-color);
+        }
+        > .desc {
+          color: var(--light-primary-color);
+        }
+      }
+    }
+  }
+  .contact {
+    background-color: #131313;
+
+    > h1 {
+      color: wh;
+
+      font-size: var(--light-section-title-font-size);
+      > span {
+        color: var(--light-second-color);
+      }
+    }
+    > .map {
+      > iframe {
+        border: 3px solid var(--light-dot-bg-color);
+        box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      }
+    }
+    > form {
+      > .leftPart {
+        > input {
+          color: var(--light-primary-color);
+          border: 3px solid var(--light-dot-bg-color);
+        }
+      }
+      > .rightPart {
+        > textarea {
+          border: 3px solid var(--light-dot-bg-color);
+          color: var(--light-primary-color);
+        }
+        > button {
+          background-color: var(--light-dot-bg-color);
+          &:hover {
+            box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
           }
         }
       }

@@ -4,29 +4,29 @@ hero.setAttribute("id", "#hero")
 
 
 let hero_data = {
-    en: {
-        "name-title": "Hi! It's",
-        "span": "Kenan",
-        "desc-about-me": "I am a UX/UI designer, IT project manager, startup enthusiast, and IT student, driven by a passion for creating user-centered digital solutions. I enjoy transforming ideas into functional and effective products.",
-        "job-title": "I'm a ",
-        "hero-buttons": "Hire",
-        "contact-btn": "Əlaqə"
-    },
-    az: {
-        "name-title": "Salam! Mən",
-        "span": "Kənan",
-        "desc-about-me": "Mən UX/UI dizayner, IT layihə meneceri, startupçı və IT tələbəsiyəm, istifadəçiyə yönəlik rəqəmsal həllər yaratmağa həvəsliyəm. İdeyaları funksional və effektiv məhsullara çevirməkdən zövq alıram.",
-        "job-title": "Edirəm: ",
-        "hero-buttons": "İş təklifi",
-        "contact-btn": "Əlaqə"
-    }
+  en: {
+    "name-title": "Hi! It's",
+    "span": "Kenan",
+    "desc-about-me": "I am a UX/UI designer, IT project manager, startup enthusiast, and IT student, driven by a passion for creating user-centered digital solutions. I enjoy transforming ideas into functional and effective products.",
+    "job-title": "I'm a ",
+    "hero-buttons": "Hire",
+    "contact-btn": "Contact"
+  },
+  az: {
+    "name-title": "Salam! Mən",
+    "span": "Kənan",
+    "desc-about-me": "Mən UX/UI dizayner, IT layihə meneceri, startupçı və IT tələbəsiyəm, istifadəçiyə yönəlik rəqəmsal həllər yaratmağa həvəsliyəm. İdeyaları funksional və effektiv məhsullara çevirməkdən zövq alıram.",
+    "job-title": "Edirəm: ",
+    "hero-buttons": "İş təklifi",
+    "contact-btn": "Əlaqə"
+  }
 }
 
 let social_links = {
-    linkedin: "https://www.linkedin.com/in/kenanqafarov",
-    github: "https://github.com/kenanqafarov",
-    instagram: "https://www.instagram.com/knanqafaro1/",
-    x: "https://x.com/KQafarov83870"
+  linkedin: "https://www.linkedin.com/in/kenanqafarov",
+  github: "https://github.com/kenanqafarov",
+  instagram: "https://www.instagram.com/knanqafaro1/",
+  x: "https://x.com/KQafarov83870"
 
 }
 
@@ -36,7 +36,7 @@ let currentDataHero = hero_data[currentState.toLocaleLowerCase()]
 
 
 hero.innerHTML =
-    `
+  `
       <div class="leftPart">
         <div class="name-title">
           <h1>${currentDataHero["name-title"]} <span>${currentDataHero["span"]}</span></h1>

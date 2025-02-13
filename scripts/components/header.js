@@ -35,8 +35,12 @@ header.innerHTML =
       <a href="#hero" class="">${currentData["navlink5"]}</a>
      
     </div>
+    
     <i class="fa-solid fa-bars bars"></i>
-    <p class="lang-btn">AZ</p>
-  </header> -->
+    <div class="rightPart">
+      <p class="lang-btn">AZ</p>
+      <i class="fa-regular fa-moon" id="darkLight"></i>
+    </div>
+  </header> 
   `
 document.body.prepend(header);
