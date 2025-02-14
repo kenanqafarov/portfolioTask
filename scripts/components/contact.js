@@ -2,32 +2,35 @@ let contact = document.createElement("div")
 contact.classList.add("contact")
 
 let contact_data = {
-    en: {
-        "title": "Contact",
-        "span": "Me",
-        "name-input": "Full Name",
-        "email-input": "Email",
-        "phone-input": "Phone number",
-        "subject-input": "Subject",
-        "message-input": "Your Message",
-        "message-btn": "Send Message"
-    }, az: {
-        "title": "Mənimlə",
-        "span": "Əlaqə",
-        "name-input": "Ad, soyadınız",
-        "email-input": "Email addressiniz",
-        "phone-input": "Telefon nömrəniz",
-        "subject-input": "Mövzu",
-        "message-input": "Mesajınızı daxil edin",
-        "message-btn": "Mesaj göndərin"
+  en: {
+    "title": "Contact",
+    "span": "Me",
+    "name-input": "Full Name",
+    "email-input": "Email",
+    "phone-input": "Phone number",
+    "subject-input": "Subject",
+    "message-input": "Your Message",
+    "message-btn": "Send Message"
+  }, az: {
+    "title": "Mənimlə",
+    "span": "Əlaqə",
+    "name-input": "Ad, soyadınız",
+    "email-input": "Email addressiniz",
+    "phone-input": "Telefon nömrəniz",
+    "subject-input": "Mövzu",
+    "message-input": "Mesajınızı daxil edin",
+    "message-btn": "Mesaj göndərin"
 
-    }
+  }
 }
+
+
+
 
 let currentContactData = contact_data[currentState.toLowerCase()]
 
 contact.innerHTML =
-    `
+  `
   <h1>${currentContactData["title"]} <span>${currentContactData["span"]} </span></h1>
   <div class="map">
     <iframe
@@ -42,18 +45,32 @@ contact.innerHTML =
   </div>
   <form action="" class="contact-me">
     <div class="leftPart">
-      <input type="text" placeholder="${currentContactData["name-input"]} " />
-      <input type="email" placeholder="${currentContactData["email-input"]} " />
-      <input type="number" placeholder="${currentContactData["phone-input"]} " />
-      <input type="text" placeholder="${currentContactData["subject-input"]} " />
+      <input type="text" placeholder="${currentContactData["name-input"]} " required />
+      <input type="email" placeholder="${currentContactData["email-input"]} " required />
+      <input type="number" placeholder="${currentContactData["phone-input"]} " required />
+      <input type="text" placeholder="${currentContactData["subject-input"]} " required />
     </div>
     <div class="rightPart">
       <textarea type="text" placeholder="${currentContactData["message-input"]} "></textarea>
-      <button type="submit">${currentContactData["message-btn"]} </button>
+      <button  type="submit">${currentContactData["message-btn"]}  </button>
     </div>
   </form>
 `
+contact.setAttribute("id", "contact")
+
 
 document.body.appendChild(contact)
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  Swal.fire({
+    title: currentState === "EN" ? "Good job!👍" : "Əlasınız!👍",
+    text: currentState === "EN" ? "You successfully sent the message!" : "Uğurla mesajı göndərdiniz!",
+    icon: "success"
+  });
+  form.reset()
+});
 
 

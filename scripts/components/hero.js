@@ -74,4 +74,7 @@ hero.innerHTML =
     `
 
 
+hero.setAttribute("id", "hero")
+
+
 document.body.append(hero)

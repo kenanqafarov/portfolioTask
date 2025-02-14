@@ -3,10 +3,10 @@ let currentTheme = localStorage.getItem("theme") || "dark";
 
 const applyTheme = (theme) => {
     if (theme === "dark") {
-        document.body.classList.remove("dark");
+        document.body.classList.remove("light");
         themeBTN.classList.replace("fa-sun", "fa-moon");
     } else {
-        document.body.classList.add("dark");
+        document.body.classList.add("light");
         themeBTN.classList.replace("fa-moon", "fa-sun");
     }
     localStorage.setItem("theme", theme);
