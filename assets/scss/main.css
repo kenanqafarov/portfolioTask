@@ -123,7 +123,7 @@
   border: 3px solid var(--light-pfp-bg-shadow);
 }
 .light .services > .my-services > .row > .service:hover {
-  cursor: pointer;
+  cursor: url("../../images/general/cursor_Hovered.png");
   background-color: var(--light-primary-back-color-bg);
 }
 .light .testimonials {
@@ -378,9 +378,30 @@ header .navbar > .rightPart > .darkLight:hover {
     width: 300px;
   }
   header .navbar > .bars {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     font-size: 22px;
     color: var(--dot-bg-color);
+  }
+  header .navbar > .bars > .line {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    border-radius: 1px;
+    transition: 0.6s ease;
+  }
+  header .navbar > .exit > .line2 {
+    display: none;
+  }
+  header .navbar > .exit > .line1 {
+    transform: rotate(45deg);
+  }
+  header .navbar > .exit > .line3 {
+    margin-top: -7px;
+    transform: rotate(-45deg);
   }
 }
 body > .hero {
@@ -448,7 +469,7 @@ body > .hero > .leftPart > .social-medias-icons > a > i {
   transition: 0.4s ease;
 }
 body > .hero > .leftPart > .social-medias-icons > a > i:hover {
-  cursor: pointer;
+  cursor: url("../../images/general/cursor_Hovered.png");
   background-color: var(--second-color);
   color: var(--primary-color);
 }
@@ -481,7 +502,7 @@ body > .hero > .leftPart > .hero-buttons > .contact-btn {
   transition: 0.4s ease;
 }
 body > .hero > .leftPart > .hero-buttons > .contact-btn:hover {
-  cursor: pointer;
+  cursor: url("../../images/general/cursor_Hovered.png");
   background-color: var(--second-color);
   color: var(--hire-me-btn-color);
 }
@@ -492,7 +513,7 @@ body > .hero > .rightPart > img {
   transition: 0.4s ease;
 }
 body > .hero > .rightPart > img:hover {
-  cursor: pointer;
+  cursor: url("../../images/general/cursor_Hovered.png") !important;
   box-shadow: 0px 0px 120px var(--pfp-bg-shadow);
 }
 
@@ -924,6 +945,20 @@ footer > .copy_right {
     width: calc(100% + 8px);
   }
 }
+body .custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #396365;
+  border-radius: 100%;
+  pointer-events: none;
+  left: -20px;
+  top: 20px;
+  transition: transform 0.2s ease-out;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -936,7 +971,7 @@ footer > .copy_right {
 
 body {
   background: var(--primary-back-color-bg);
-  transition: 0.6s ease;
+  transition: background 0.6s ease;
 }
 
 @media (max-width: 768px) {

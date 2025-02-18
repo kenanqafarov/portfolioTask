@@ -27,7 +27,11 @@ let currentDataHeader = header_data[currentLanguageState.toLocaleLowerCase()]
 
 
 const sidebarHandle = () => {
+  const menuIcon = document.querySelector("#menuIcon");
+  menuIcon.classList.toggle("exit")
+
   document.getElementById("sidebar").classList.toggle("sidebarActive")
+
 }
 
 
@@ -45,7 +49,11 @@ header.innerHTML =
       <a href="#contact" class="nav-link">${currentDataHeader["navlink5"]}</a>
     </div>
     
-    <i class="fa-solid fa-bars bars" id="menuIcon" onClick=sidebarHandle()></i>
+    <div class="bars" id="menuIcon" onClick=sidebarHandle()>
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
     <div class="rightPart">
       <p class="lang-btn">AZ</p>
       <i class="fa-regular fa-moon darkLight" id="darkLight"></i>

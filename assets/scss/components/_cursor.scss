@@ -1,0 +1,15 @@
+body {
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #396365;
+    border-radius: 100%;
+    pointer-events: none;
+    left: -20px;
+    top: 20px;
+    transition: transform 0.2s ease-out;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+}

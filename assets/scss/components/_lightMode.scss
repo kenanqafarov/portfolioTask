@@ -137,7 +137,7 @@
           background-color: var(--light-pfp-bg-shadow);
           border: 3px solid var(--light-pfp-bg-shadow);
           &:hover {
-            cursor: pointer;
+            cursor: url("../../images/general/cursor_Hovered.png");
             background-color: var(--light-primary-back-color-bg);
           }
         }

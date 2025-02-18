@@ -63,7 +63,7 @@ body {
             border: 1px solid var(--second-color);
             transition: 0.4s ease;
             &:hover {
-              cursor: pointer;
+              cursor: url("../../images/general/cursor_Hovered.png");
               background-color: var(--second-color);
               color: var(--primary-color);
             }
@@ -97,7 +97,7 @@ body {
           border: 1px solid var(--second-color);
           transition: 0.4s ease;
           &:hover {
-            cursor: pointer;
+            cursor: url("../../images/general/cursor_Hovered.png");
             background-color: var(--second-color);
             color: var(--hire-me-btn-color);
           }
@@ -111,7 +111,7 @@ body {
         box-shadow: 0px 0px 60px var(--pfp-bg-shadow);
         transition: 0.4s ease;
         &:hover {
-          cursor: pointer;
+          cursor: url("../../images/general/cursor_Hovered.png") !important;
           box-shadow: 0px 0px 120px var(--pfp-bg-shadow);
         }
       }
