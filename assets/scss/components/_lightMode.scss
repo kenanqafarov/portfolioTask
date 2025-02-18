@@ -1,0 +1,173 @@
+/* Dark mode style */
+.light {
+  background: var(--light-primary-back-color-bg);
+  > .hero {
+    > .leftPart {
+      > .name-title {
+        > h1 {
+          color: var(--light-primary-color);
+          > span {
+            color: var(--light-second-color);
+            text-shadow: 1px 1px 20px var(--light-second-color);
+          }
+        }
+      }
+      > .job-title {
+        color: var(--light-primary-color);
+        > h2 {
+          > span {
+            &::before {
+              color: var(--light-second-color);
+            }
+            &::after {
+              background-color: var(--light-primary-back-color-bg);
+              border-left: 3px solid var(--light-second-color);
+            }
+          }
+        }
+      }
+      > .desc-about-me {
+        color: var(--light-primary-color);
+      }
+      > .social-medias-icons {
+        color: var(--light-second-color);
+        > a {
+          color: var(--light-second-color);
+          > i {
+            border: 1px solid var(--light-second-color);
+            &:hover {
+              background-color: var(--light-second-color);
+              color: var(--light-primary-color);
+            }
+          }
+        }
+      }
+      > .hero-buttons {
+        > .hire-btn {
+          background-color: var(--light-second-color);
+          color: var(--light-hire-me-btn-color);
+          border: 1px solid var(--light-second-color);
+          box-shadow: 1px 1px 20px var(--light-second-color);
+        }
+        > .contact-btn {
+          color: var(--light-second-color);
+          border: 1px solid var(--light-second-color);
+          &:hover {
+            background-color: var(--light-second-color);
+            color: var(--light-hire-me-btn-color);
+          }
+        }
+      }
+    }
+    > .rightPart {
+      > img {
+        box-shadow: 0px 0px 60px var(--light-pfp-bg-shadow);
+        &:hover {
+          box-shadow: 0px 0px 120px var(--light-pfp-bg-shadow);
+        }
+      }
+    }
+  }
+  > .education {
+    background-color: #131313;
+    > h1 {
+      color: var(--light-primary-back-color-bg);
+      font-size: var(--light-section-title-font-size);
+    }
+    > .base-line {
+      background-color: var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+    }
+    > .dot {
+      background-color: var(--light-dot-bg-color);
+    }
+    > .university {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .texnoera {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .turing {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+    > .matrix {
+      border: 2px solid var(--light-pfp-bg-shadow);
+      box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+      background-color: var(--light-primary-back-color-bg);
+      .title {
+        color: var(--light-primary-color);
+      }
+      .desc {
+        color: var(--light-desc-color);
+      }
+    }
+  }
+  .services {
+    > h1 {
+      color: var(--light-primary-color);
+      font-size: var(--light-section-title-font-size);
+    }
+    > .my-services {
+      > .row {
+        > .service {
+          background-color: var(--light-pfp-bg-shadow);
+          border: 3px solid var(--light-pfp-bg-shadow);
+          &:hover {
+            cursor: pointer;
+            background-color: var(--light-primary-back-color-bg);
+          }
+        }
+      }
+    }
+  }
+  .testimonials {
+    background-color: #131313;
+    > h1 {
+      font-size: var(--light-section-title-font-size);
+      color: var(--light-primary-back-color-bg);
+    }
+    .swiper {
+      .swiper-slide {
+        border: 1px solid var(--light-desc-color);
+        background-color: var(--light-testimonials-element-bg-color);
+        > img {
+          border: 2px solid var(--light-second-color);
+          box-shadow: 1px 1px 20px var(--light-pfp-bg-shadow);
+        }
+        > .reviewer-name {
+          color: var(--light-primary-color);
+        }
+        > .stars {
+          color: var(--light-star-color);
+        }
+        > .desc {
+          color: var(--light-primary-color);
+        }
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ let contact_data = {
 
 
 
-let currentContactData = contact_data[currentState.toLowerCase()]
+let currentContactData = contact_data[currentLanguageState.toLowerCase()]
 
 contact.innerHTML =
   `

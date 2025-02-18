@@ -31,7 +31,7 @@ let social_links = {
 }
 
 
-let currentDataHero = hero_data[currentState.toLocaleLowerCase()]
+let currentDataHero = hero_data[currentLanguageState.toLocaleLowerCase()]
 
 
 
@@ -70,7 +70,7 @@ hero.innerHTML =
         </div>
       </div>
       <div class="rightPart">
-        <img src="assets/images/pfp-kenan-2.png" alt="Kenan Qafarov " />
+        <img src="assets/images/general/pfp-Kenan.png" alt="Kenan Qafarov " />
       </div>
     `
 

@@ -1,0 +1,133 @@
+body {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1200px;
+    > h1 {
+      color: white;
+      font-size: var(--section-title-font-size);
+      text-align: center;
+      margin-top: -70px;
+      > span {
+        color: var(--second-color);
+      }
+    }
+    > .map {
+      margin-top: 70px;
+      > iframe {
+        width: 1000px;
+        height: 500px;
+        opacity: 0.25;
+        transition: 0.4s ease;
+        border-radius: 10px;
+        position: relative;
+        border: 3px solid var(--dot-bg-color);
+        box-shadow: 1px 1px 20px var(--pfp-bg-shadow);
+        &:hover {
+          opacity: 0.9;
+        }
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+    > form {
+      display: flex;
+      justify-content: center;
+      width: 1000px;
+      margin-top: 100px;
+      gap: 80px;
+      > .leftPart {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        > input {
+          color: var(--primary-color);
+          padding-left: 10px;
+          width: 400px;
+          height: 55px;
+          border: none;
+          font-size: 16px;
+          border-radius: 10px;
+          background-color: transparent;
+          border: 3px solid var(--dot-bg-color);
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      > .rightPart {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        > textarea {
+          min-height: 250px;
+          height: 100%;
+          max-height: 150px;
+          height: 100%;
+          background-color: transparent;
+          border: 3px solid var(--dot-bg-color);
+          font-size: 14px;
+          resize: none;
+          width: 500px;
+          border-radius: 10px;
+          padding-left: 15px;
+          padding-top: 20px;
+          color: var(--primary-color);
+
+          &:focus {
+            outline: none;
+          }
+        }
+        > button {
+          padding: 8px 12px;
+          border-radius: 10px;
+          border: none;
+          font-weight: 500;
+          background-color: var(--dot-bg-color);
+          transition: 0.4s ease;
+          &:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 20px var(--pfp-bg-shadow);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .contact {
+      height: 1300px;
+      width: 100%;
+      margin: -200px auto;
+      > .map {
+        > iframe {
+          width: 100%;
+          height: 200px;
+        }
+      }
+      > form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > .leftPart {
+          > input {
+            width: 340px;
+          }
+        }
+        > .rightPart {
+          > textarea {
+            margin: 0 auto;
+            min-width: 340px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

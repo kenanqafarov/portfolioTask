@@ -1,0 +1,51 @@
+@keyframes blink {
+  to {
+    border-left: 2px solid var(--second-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Front-end Developer";
+  }
+  21%,
+  40% {
+    content: "UX / UI Designer";
+  }
+  41%,
+  60% {
+    content: "Enterpreneur";
+  }
+  61%,
+  80% {
+    content: "IT Project Manager";
+  }
+  81%,
+  100% {
+    content: "IT Student";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  70%,
+  75%,
+  90% {
+    width: 0;
+  }
+  5%,
+  20%,
+  40%,
+  45%,
+  60%,
+  65%,
+  90%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}

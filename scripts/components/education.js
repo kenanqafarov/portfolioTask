@@ -26,7 +26,7 @@ let education_data = {
   }
 };
 
-let currentEducationData = education_data[currentState.toLocaleLowerCase()]
+let currentEducationData = education_data[currentLanguageState.toLocaleLowerCase()]
 
 
 education.setAttribute("id", "education")

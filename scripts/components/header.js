@@ -22,8 +22,7 @@ let header_data = {
 
 
 
-let currentState = localStorage.getItem("lang") || "EN"
-let currentData = header_data[currentState.toLocaleLowerCase()]
+let currentDataHeader = header_data[currentLanguageState.toLocaleLowerCase()]
 
 
 
@@ -39,11 +38,11 @@ header.innerHTML =
       <p>Kenan <span>Qafarov</span></p>
     </div>
     <div class="navLinks">
-      <a href="#hero" class="nav-link active">${currentData["navlink1"]}</a>
-      <a href="#education" class="nav-link">${currentData["navlink2"]}</a>
-      <a href="#services" class="nav-link">${currentData["navlink3"]}</a>
-      <a href="#testimonials" class="nav-link">${currentData["navlink4"]}</a>
-      <a href="#contact" class="nav-link">${currentData["navlink5"]}</a>
+      <a href="#hero" class="nav-link active">${currentDataHeader["navlink1"]}</a>
+      <a href="#education" class="nav-link">${currentDataHeader["navlink2"]}</a>
+      <a href="#services" class="nav-link">${currentDataHeader["navlink3"]}</a>
+      <a href="#testimonials" class="nav-link">${currentDataHeader["navlink4"]}</a>
+      <a href="#contact" class="nav-link">${currentDataHeader["navlink5"]}</a>
     </div>
     
     <i class="fa-solid fa-bars bars" id="menuIcon" onClick=sidebarHandle()></i>
@@ -53,11 +52,11 @@ header.innerHTML =
     </div>
   </div>
   <div class="sidebar" id="sidebar">
-        <a href="#hero">${currentData["navlink1"]}</a>
-        <a href="#education">${currentData["navlink2"]}</a>
-        <a href="#services">${currentData["navlink3"]}</a>
-        <a href="#testimonials">${currentData["navlink4"]}</a>
-        <a href="#contact">${currentData["navlink5"]}</a>
+        <a href="#hero">${currentDataHeader["navlink1"]}</a>
+        <a href="#education">${currentDataHeader["navlink2"]}</a>
+        <a href="#services">${currentDataHeader["navlink3"]}</a>
+        <a href="#testimonials">${currentDataHeader["navlink4"]}</a>
+        <a href="#contact">${currentDataHeader["navlink5"]}</a>
         <div class = "sidebar-icons">
           <p class="lang-btn-mobile">AZ</p>
           <i class="fa-regular fa-moon darkLight-mobile" id="darkLight-mobile"></i>

@@ -32,7 +32,7 @@ let service_data = {
 
 
 
-let currentServiceData = service_data[currentState.toLocaleLowerCase()]
+let currentServiceData = service_data[currentLanguageState.toLocaleLowerCase()]
 
 
 

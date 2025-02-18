@@ -69,7 +69,7 @@ let testimonials_data = {
 
 
 
-let currentTestimonialsData = testimonials_data[currentState.toLowerCase()]
+let currentTestimonialsData = testimonials_data[currentLanguageState.toLowerCase()]
 
 
 testimonials.innerHTML =
@@ -80,7 +80,7 @@ testimonials.innerHTML =
           <div class="swiper-slide">
             <img
               src="${currentTestimonialsData["user-1-img"]}"
-              alt="Anastasiya V."
+              alt="${currentTestimonialsData["user-1"]}"
             />
             <p class="reviewer-name">${currentTestimonialsData["user-1"]}</p>
             <div class="stars">
@@ -97,7 +97,7 @@ testimonials.innerHTML =
           <div class="swiper-slide">
             <img
               src="${currentTestimonialsData["user-2-img"]}"
-              alt="Anastasiya V."
+              alt="${currentTestimonialsData["user-2"]}"
             />
             <p class="reviewer-name">${currentTestimonialsData["user-2"]}</p>
             <div class="stars">
@@ -114,7 +114,7 @@ testimonials.innerHTML =
           <div class="swiper-slide">
             <img
               src="${currentTestimonialsData["user-3-img"]}"
-              alt="Anastasiya V."
+              alt="${currentTestimonialsData["user-3"]}"
             />
             <p class="reviewer-name">${currentTestimonialsData["user-3"]}</p>
             <div class="stars">
@@ -131,7 +131,7 @@ testimonials.innerHTML =
           <div class="swiper-slide">
             <img
               src="${currentTestimonialsData["user-4-img"]}"
-              alt="Anastasiya V."
+              alt="${currentTestimonialsData["user-4"]}"
             />
            <p class="reviewer-name">${currentTestimonialsData["user-4"]}</p>
             <div class="stars">
@@ -148,7 +148,7 @@ testimonials.innerHTML =
           <div class="swiper-slide">
             <img
               src="${currentTestimonialsData["user-5-img"]}"
-              alt="Anastasiya V."
+              alt="${currentTestimonialsData["user-5"]}"
             />
              <p class="reviewer-name">${currentTestimonialsData["user-5"]}</p>
             <div class="stars">
