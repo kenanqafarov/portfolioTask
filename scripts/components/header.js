@@ -1,4 +1,4 @@
-// We are creating a header 
+// We are creating a header
 
 let header = document.createElement("header")
 
@@ -19,11 +19,22 @@ let header_data = {
   }
 }
 
+
+
+
 let currentState = localStorage.getItem("lang") || "EN"
 let currentData = header_data[currentState.toLocaleLowerCase()]
 
+
+
+const sidebarHandle = () => {
+  document.getElementById("sidebar").classList.toggle("sidebarActive")
+}
+
+
 header.innerHTML =
   `
+  <div class = "navbar">
    <div class="logo">
       <p>Kenan <span>Qafarov</span></p>
     </div>
@@ -35,45 +46,26 @@ header.innerHTML =
       <a href="#contact" class="nav-link">${currentData["navlink5"]}</a>
     </div>
     
-    <i class="fa-solid fa-bars bars"></i>
+    <i class="fa-solid fa-bars bars" id="menuIcon" onClick=sidebarHandle()></i>
     <div class="rightPart">
       <p class="lang-btn">AZ</p>
-      <i class="fa-regular fa-moon" id="darkLight"></i>
+      <i class="fa-regular fa-moon darkLight" id="darkLight"></i>
     </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+        <a href="#hero">${currentData["navlink1"]}</a>
+        <a href="#education">${currentData["navlink2"]}</a>
+        <a href="#services">${currentData["navlink3"]}</a>
+        <a href="#testimonials">${currentData["navlink4"]}</a>
+        <a href="#contact">${currentData["navlink5"]}</a>
+        <div class = "sidebar-icons">
+          <p class="lang-btn-mobile">AZ</p>
+          <i class="fa-regular fa-moon darkLight-mobile" id="darkLight-mobile"></i>
+        </div>
+  </div>
+
+   
   `
 
 document.body.prepend(header);
 
-// === SCROLL VE CLICK ACTIVE SISTEMI ===
-
-// Linkləri və bölmələri seçirik
-const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section");
-
-// Klik zamanı aktiv link dəyişdirilməsi
-navLinks.forEach(link => {
-  link.addEventListener("click", function () {
-    navLinks.forEach(l => l.classList.remove("active"));
-    this.classList.add("active");
-  });
-});
-
-// Scroll zamanı aktiv link dəyişdirilməsi
-window.addEventListener("scroll", () => {
-  let currentSection = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100; // header hündürlüyünü nəzərə alırıq
-    const sectionHeight = section.clientHeight;
-
-    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-      currentSection = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
-  });
-});

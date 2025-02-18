@@ -63,6 +63,7 @@ hero.innerHTML =
             <i class="fa-brands fa-square-x-twitter"></i>
           </a>
         </div>
+        
         <div class="hero-buttons">
           <p class="hire-btn">${currentDataHero["hero-buttons"]}</p>
           <p class="contact-btn">${currentDataHero["contact-btn"]}</p>

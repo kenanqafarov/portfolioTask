@@ -33,28 +33,30 @@ education.setAttribute("id", "education")
 education.innerHTML =
   `
       <h1>Education</h1>
-      <div class="base-line"></div>
-      <div class="first dot"></div>
-      <div class="university">
-        <p class="title">${currentEducationData["title-1"]}</p>
-        <p class="desc">${currentEducationData["desc-1"]}</p>
-      </div>
-      <div class="second dot"></div>
-      <div class="texnoera">
-        <p class="title">${currentEducationData["title-2"]}</p>
-        <p class="desc">${currentEducationData["desc-2"]}</p>
-      </div>
-      <div class="third dot"></div>
+      <div class = "education-content">
+        <div class="base-line"></div>
+        <div class="first dot"></div>
+        <div class="university">
+          <p class="title">${currentEducationData["title-1"]}</p>
+          <p class="desc">${currentEducationData["desc-1"]}</p>
+        </div>
+        <div class="second dot"></div>
+        <div class="texnoera">
+          <p class="title">${currentEducationData["title-2"]}</p>
+          <p class="desc">${currentEducationData["desc-2"]}</p>
+        </div>
+        <div class="third dot"></div>
 
-      <div class="turing">
-        <p class="title">${currentEducationData["title-3"]}</p>
-        <p class="desc">${currentEducationData["desc-3"]}</p>
-      </div>
-      <div class="fourth dot"></div>
+        <div class="turing">
+          <p class="title">${currentEducationData["title-3"]}</p>
+          <p class="desc">${currentEducationData["desc-3"]}</p>
+        </div>
+        <div class="fourth dot"></div>
 
-      <div class="matrix">
-        <p class="title">${currentEducationData["title-4"]}</p>
-        <p class="desc">${currentEducationData["desc-4"]}</p>
+        <div class="matrix">
+          <p class="title">${currentEducationData["title-4"]}</p>
+          <p class="desc">${currentEducationData["desc-4"]}</p>
+        </div>
       </div>
 `
 document.body.appendChild(education)
