@@ -170,4 +170,18 @@
       }
     }
   }
+  .contact {
+    > form {
+      > .leftPart {
+        > input {
+          color: #131313;
+        }
+      }
+      > .rightPart {
+        > textarea {
+          color: #131313;
+        }
+      }
+    }
+  }
 }

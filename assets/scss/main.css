@@ -150,6 +150,12 @@
 .light .testimonials .swiper .swiper-slide > .desc {
   color: var(--light-primary-color);
 }
+.light .contact > form > .leftPart > input {
+  color: #131313;
+}
+.light .contact > form > .rightPart > textarea {
+  color: #131313;
+}
 
 header .sidebar {
   position: absolute;
@@ -241,7 +247,7 @@ header .sidebarActive {
   transform: translateY(80px);
 }
 header .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -378,7 +384,7 @@ header .navbar > .rightPart > .darkLight:hover {
   }
 }
 body > .hero {
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -461,6 +467,11 @@ body > .hero > .leftPart > .hero-buttons > .hire-btn {
   color: var(--hire-me-btn-color);
   border: 1px solid var(--second-color);
   box-shadow: 1px 1px 20px var(--second-color);
+  transition: 0.6s ease;
+}
+body > .hero > .leftPart > .hero-buttons > .hire-btn:hover {
+  box-shadow: 1px 1px 30px var(--second-color-hover);
+  transform: scale(0.95);
 }
 body > .hero > .leftPart > .hero-buttons > .contact-btn {
   color: var(--second-color);
@@ -788,7 +799,7 @@ body .contact > form > .rightPart > button:hover {
   body .contact {
     height: 1300px;
     width: 100%;
-    margin: -200px auto;
+    margin: 0 auto;
   }
   body .contact > .map > iframe {
     width: 100%;
@@ -945,6 +956,7 @@ body {
   --primary-back-color-header: #080808d2;
   --primary-color: white;
   --second-color: #8bf8e4;
+  --second-color-hover: #046e5a;
   --hire-me-btn-color: #122023;
   --pfp-bg-shadow: #00fbff;
   --dot-bg-color: #8af9ea;
@@ -970,4 +982,30 @@ body {
   --light-star-color: #ffb400;
   --light-testimonials-element-bg-color: #f5f5f5;
   --light-footer-bg-color: #060505;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-pfp-bg-shadow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color-hover);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }/*# sourceMappingURL=main.css.map */

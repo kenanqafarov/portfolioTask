@@ -41,8 +41,8 @@ let services = document.createElement("div")
 services.classList.add("services")
 services.innerHTML =
   `
- <h1>${currentServiceData["title"]}</h1>
-  <div class="my-services">
+ <h1 data-aos="fade-right">${currentServiceData["title"]}</h1>
+  <div class="my-services" data-aos="fade-up">
     <div class="row">
       <div class="service">
         <p class="title">${currentServiceData["service1"]}</p>

@@ -31,8 +31,8 @@ let currentContactData = contact_data[currentLanguageState.toLowerCase()]
 
 contact.innerHTML =
   `
-  <h1>${currentContactData["title"]} <span>${currentContactData["span"]} </span></h1>
-  <div class="map">
+  <h1 data-aos="fade-down">${currentContactData["title"]} <span>${currentContactData["span"]} </span></h1>
+  <div class="map" data-aos="fade-up">
     <iframe
       frameborder="0"
       scrolling="no"
@@ -43,7 +43,7 @@ contact.innerHTML =
     ></iframe>
     <div class="layer"></div>
   </div>
-  <form action="" class="contact-me">
+  <form data-aos="fade-up" action="" class="contact-me">
     <div class="leftPart">
       <input type="text" placeholder="${currentContactData["name-input"]} " required />
       <input type="email" placeholder="${currentContactData["email-input"]} " required />

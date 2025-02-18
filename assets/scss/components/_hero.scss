@@ -1,6 +1,6 @@
 body {
   > .hero {
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -84,6 +84,11 @@ body {
           color: var(--hire-me-btn-color);
           border: 1px solid var(--second-color);
           box-shadow: 1px 1px 20px var(--second-color);
+          transition: 0.6s ease;
+          &:hover {
+            box-shadow: 1px 1px 30px var(--second-color-hover);
+            transform: scale(0.95);
+          }
         }
         > .contact-btn {
           color: var(--second-color);

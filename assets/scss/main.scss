@@ -2,7 +2,7 @@
 
 @import "./components/lightMode";
 @import "./layout/header";
-@import "./components/intro";
+@import "./components/hero";
 @import "./components/services";
 @import "./components/testimonials";
 @import "./components/contact";
@@ -43,6 +43,7 @@ body {
   --primary-back-color-header: #080808d2;
   --primary-color: white;
   --second-color: #8bf8e4;
+  --second-color-hover: #046e5a;
   --hire-me-btn-color: #122023;
   --pfp-bg-shadow: #00fbff;
   --dot-bg-color: #8af9ea;
@@ -69,4 +70,26 @@ body {
   --light-star-color: #ffb400;
   --light-testimonials-element-bg-color: #f5f5f5;
   --light-footer-bg-color: #060505;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-pfp-bg-shadow);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color-hover);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

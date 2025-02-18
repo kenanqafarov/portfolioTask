@@ -37,8 +37,9 @@ let currentDataHero = hero_data[currentLanguageState.toLocaleLowerCase()]
 
 hero.innerHTML =
   `
-      <div class="leftPart">
+      <div class="leftPart" data-aos="fade-right"  >
         <div class="name-title">
+        
           <h1>${currentDataHero["name-title"]} <span>${currentDataHero["span"]}</span></h1>
         </div>
         <div class="job-title">
@@ -65,11 +66,13 @@ hero.innerHTML =
         </div>
         
         <div class="hero-buttons">
-          <p class="hire-btn">${currentDataHero["hero-buttons"]}</p>
-          <p class="contact-btn">${currentDataHero["contact-btn"]}</p>
+          <a class="hire-btn" target="_blank"  href="${social_links.linkedin}">
+            ${currentDataHero["hero-buttons"]}
+          </a>
+          <a class="contact-btn" href="#contact">${currentDataHero["contact-btn"]}</a>
         </div>
       </div>
-      <div class="rightPart">
+      <div class="rightPart"  data-aos="fade-left">
         <img src="assets/images/general/pfp-Kenan.png" alt="Kenan Qafarov " />
       </div>
     `
