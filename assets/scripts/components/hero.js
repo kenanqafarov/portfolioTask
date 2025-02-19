@@ -22,6 +22,7 @@ let hero_data = {
   }
 }
 
+
 let social_links = {
   linkedin: "https://www.linkedin.com/in/kenanqafarov",
   github: "https://github.com/kenanqafarov",

@@ -718,6 +718,137 @@ body .testimonials .swiper .swiper-slide > .desc {
     height: 500px;
   }
 }
+body > .education {
+  margin-top: 200px;
+  width: 100%;
+  height: 1400px;
+  background-color: var(--education-bg-color);
+}
+body > .education > h1 {
+  text-align: center;
+  padding-top: 80px;
+  font-size: var(--section-title-font-size);
+  color: white;
+}
+body > .education > .education-content {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+}
+body > .education > .education-content > .base-line {
+  margin: 80px auto;
+  height: 900px;
+  border-radius: 4px;
+  width: 4px;
+  background-color: var(--line-bg-color);
+}
+body > .education > .education-content > .dot {
+  background-color: var(--dot-bg-color);
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 393px;
+}
+body > .education > .education-content > .first {
+  top: 128px;
+}
+body > .education > .education-content > .second {
+  top: 356px;
+}
+body > .education > .education-content > .third {
+  top: 584px;
+}
+body > .education > .education-content > .fourth {
+  top: 812px;
+}
+body > .education > .education-content > .element {
+  border: none;
+  background-color: var(--education-div-bg-color);
+  border: 3px solid var(--education-div-border-bg-color);
+  border-radius: 10px;
+  height: 150px;
+  width: 400px;
+  position: relative;
+  transition: 0.6s ease;
+}
+body > .education > .education-content > .element:hover {
+  cursor: pointer;
+  background-color: var(--education-div-hover-bg-color);
+}
+body > .education > .education-content > .element > .title {
+  font-size: var(--education-font-size);
+  font-weight: 600;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+}
+body > .education > .education-content > .element > .desc {
+  position: absolute;
+  top: 65px;
+  left: 10px;
+  width: 100%;
+  max-width: 320px;
+  font-size: var(--education-desc-font-size);
+}
+body > .education > .education-content > .element > .date {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+body > .education > .education-content > .university {
+  bottom: 870px;
+  left: 420px;
+}
+body > .education > .education-content > .texnoera {
+  bottom: 770px;
+  left: -20px;
+}
+body > .education > .education-content > .turing {
+  bottom: 700px;
+  left: 420px;
+}
+body > .education > .education-content > .matrix {
+  bottom: 620px;
+  left: -20px;
+}
+
+@media (max-width: 768px) {
+  body > .education > .education-content > .base-line {
+    position: absolute;
+    left: 20px;
+    height: 1100px;
+  }
+  body > .education > .education-content > .dot {
+    left: 15px;
+  }
+  body > .education > .education-content > .third {
+    top: 624px;
+  }
+  body > .education > .education-content > .fourth {
+    top: 882px;
+  }
+  body > .education > .education-content > .element {
+    left: 30px;
+    width: 350px;
+    height: 200px;
+  }
+  body > .education > .education-content > .element > .desc {
+    top: 90px;
+  }
+  body > .education > .education-content > .university {
+    top: 150px;
+  }
+  body > .education > .education-content > .texnoera {
+    bottom: -200px;
+  }
+  body > .education > .education-content > .matrix {
+    top: 50px;
+  }
+  body > .education > .education-content > .turing {
+    top: 500px;
+  }
+}
 body .contact {
   display: flex;
   flex-direction: column;
@@ -1017,6 +1148,15 @@ body {
   --light-star-color: #ffb400;
   --light-testimonials-element-bg-color: #f5f5f5;
   --light-footer-bg-color: #060505;
+  --education-bg-color: #131313;
+  --line-bg-color: rgb(76, 184, 246);
+  --dot-bg-color: #037274;
+  --education-div-bg-color: #00fbff;
+  --education-div-hover-bg-color: #ffffff;
+  --education-div-border-bg-color: #05abae;
+  --education-title-font-size: 16px;
+  --education-desc-font-size: 13px;
+  --education-fs-font-size: 12px;
 }
 
 ::-webkit-scrollbar {

@@ -1,0 +1,139 @@
+body {
+  > .education {
+    margin-top: 200px;
+    width: 100%;
+    height: 1400px;
+    background-color: var(--education-bg-color);
+    > h1 {
+      text-align: center;
+      padding-top: 80px;
+      font-size: var(--section-title-font-size);
+      color: white;
+    }
+    > .education-content {
+      position: relative;
+      margin: 0 auto;
+      width: 800px;
+      > .base-line {
+        margin: 80px auto;
+        height: 900px;
+        border-radius: 4px;
+        width: 4px;
+        background-color: var(--line-bg-color);
+      }
+      > .dot {
+        background-color: var(--dot-bg-color);
+        border-radius: 100%;
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        left: 393px;
+      }
+      > .first {
+        top: 128px;
+      }
+      > .second {
+        top: 356px;
+      }
+      > .third {
+        top: 584px;
+      }
+      > .fourth {
+        top: 812px;
+      }
+      > .element {
+        border: none;
+        background-color: var(--education-div-bg-color);
+        border: 3px solid var(--education-div-border-bg-color);
+        border-radius: 10px;
+        height: 150px;
+        width: 400px;
+        position: relative;
+        transition: 0.6s ease;
+        &:hover {
+          cursor: pointer;
+          background-color: var(--education-div-hover-bg-color);
+        }
+        > .title {
+          font-size: var(--education-font-size);
+          font-weight: 600;
+          position: absolute;
+          top: 40px;
+          left: 10px;
+        }
+        > .desc {
+          position: absolute;
+          top: 65px;
+          left: 10px;
+          width: 100%;
+          max-width: 320px;
+          font-size: var(--education-desc-font-size);
+        }
+        > .date {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      }
+      > .university {
+        bottom: 870px;
+        left: 420px;
+      }
+      > .texnoera {
+        bottom: 770px;
+        left: -20px;
+      }
+      > .turing {
+        bottom: 700px;
+        left: 420px;
+      }
+      > .matrix {
+        bottom: 620px;
+        left: -20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    > .education {
+      > .education-content {
+        > .base-line {
+          position: absolute;
+          left: 20px;
+          height: 1100px;
+        }
+        > .dot {
+          left: 15px;
+        }
+        > .third {
+          top: 624px;
+        }
+        > .fourth {
+          top: 882px;
+        }
+        > .element {
+          left: 30px;
+          width: 350px;
+          height: 200px;
+          > .desc {
+            top: 90px;
+          }
+        }
+        > .university {
+          top: 150px;
+        }
+        > .texnoera {
+          bottom: -200px;
+        }
+        > .matrix {
+          top: 50px;
+        }
+        > .turing {
+          top: 500px;
+        }
+      }
+    }
+  }
+}
