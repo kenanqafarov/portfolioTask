@@ -1,6 +1,5 @@
 body {
   > .education {
-    margin-top: 200px;
     width: 100%;
     height: 1400px;
     background-color: var(--education-bg-color);
@@ -46,7 +45,7 @@ body {
         background-color: var(--education-div-bg-color);
         border: 3px solid var(--education-div-border-bg-color);
         border-radius: 10px;
-        height: 150px;
+        height: 190px;
         width: 400px;
         position: relative;
         transition: 0.6s ease;
@@ -80,15 +79,15 @@ body {
         left: 420px;
       }
       > .texnoera {
-        bottom: 770px;
+        bottom: 800px;
         left: -20px;
       }
       > .turing {
-        bottom: 700px;
+        bottom: 750px;
         left: 420px;
       }
       > .matrix {
-        bottom: 620px;
+        bottom: 720px;
         left: -20px;
       }
     }

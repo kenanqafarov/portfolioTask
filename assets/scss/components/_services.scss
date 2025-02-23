@@ -10,40 +10,38 @@ body {
       margin-bottom: 40px;
     }
     > .my-services {
-      display: flex;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+      display: grid;
+      grid-template-columns: auto auto;
       justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 10px;
+      column-gap: 10px;
+      row-gap: 10px;
 
-      > .row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        > .service {
-          width: 500px;
-          height: 180px;
+      > .service {
+        width: 500px;
+        height: 220px;
+        padding-top: 20px;
+        padding-left: 20px;
+        background-color: var(--pfp-bg-shadow);
+        border-radius: 20px;
+        border: 3px solid var(--pfp-bg-shadow);
+        transition: 0.4s ease;
+        > .title {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        > .desc {
+          width: 400px;
+          font-size: 10px;
+          max-width: 100%;
           padding-top: 20px;
-          padding-left: 20px;
-          background-color: var(--pfp-bg-shadow);
-          border-radius: 20px;
-          border: 3px solid var(--pfp-bg-shadow);
-          transition: 0.4s ease;
-          > .title {
-            font-size: 18px;
-            font-weight: 600;
-          }
-          > .desc {
-            width: 400px;
-            font-size: 10px;
-            max-width: 100%;
-            padding-top: 20px;
-          }
-          &:hover {
-            cursor: pointer;
-            background-color: var(--primary-color);
-          }
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: var(--primary-color);
         }
       }
     }
@@ -55,20 +53,16 @@ body {
     .services {
       height: 700px;
       width: 100%;
-      margin-top: 120px;
       > h1 {
         font-size: 25px;
       }
       > .my-services {
-        flex-direction: column;
-        > .row {
-          flex-direction: column;
-          > .service {
-            padding-left: 10px;
-            padding-top: 20px;
-            width: 350px;
-            max-width: 100%;
-          }
+        grid-template-columns: auto;
+        > .service {
+          padding-left: 10px;
+          padding-top: 20px;
+          width: 350px;
+          max-width: 100%;
         }
       }
     }

@@ -47,7 +47,7 @@ contact.innerHTML =
     <div class="leftPart">
       <input type="text" placeholder="${currentContactData["name-input"]} " required />
       <input type="email" placeholder="${currentContactData["email-input"]} " required />
-      <input type="number" placeholder="${currentContactData["phone-input"]} " required />
+      <input type="number" placeholder="${currentContactData["phone-input"]} " minlength="10" required />
       <input type="text" placeholder="${currentContactData["subject-input"]} " required />
     </div>
     <div class="rightPart">
@@ -66,8 +66,8 @@ const form = document.querySelector("form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   Swal.fire({
-    title: currentState === "EN" ? "Good job!👍" : "Əlasınız!👍",
-    text: currentState === "EN" ? "You successfully sent the message!" : "Uğurla mesajı göndərdiniz!",
+    title: currentLanguageState === "EN" ? "Good job!👍" : "Əlasınız!👍",
+    text: currentLanguageState === "EN" ? "You successfully sent the message!" : "Uğurla mesajı göndərdiniz!",
     icon: "success"
   });
   form.reset()

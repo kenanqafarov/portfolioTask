@@ -123,7 +123,7 @@
   border: 3px solid var(--light-pfp-bg-shadow);
 }
 .light .services > .my-services > .row > .service:hover {
-  cursor: url("../../images/general/cursor_Hovered.png");
+  cursor: pointer;
   background-color: var(--light-primary-back-color-bg);
 }
 .light .testimonials {
@@ -149,6 +149,9 @@
 }
 .light .testimonials .swiper .swiper-slide > .desc {
   color: var(--light-primary-color);
+}
+.light .contact > h1 {
+  color: black;
 }
 .light .contact > form > .leftPart > input {
   color: #131313;
@@ -572,21 +575,16 @@ body > .services > h1 {
   margin-bottom: 40px;
 }
 body > .services > .my-services {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
 }
-body > .services > .my-services > .row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-body > .services > .my-services > .row > .service {
+body > .services > .my-services > .service {
   width: 500px;
-  height: 180px;
+  height: 220px;
   padding-top: 20px;
   padding-left: 20px;
   background-color: var(--pfp-bg-shadow);
@@ -594,17 +592,17 @@ body > .services > .my-services > .row > .service {
   border: 3px solid var(--pfp-bg-shadow);
   transition: 0.4s ease;
 }
-body > .services > .my-services > .row > .service > .title {
+body > .services > .my-services > .service > .title {
   font-size: 18px;
   font-weight: 600;
 }
-body > .services > .my-services > .row > .service > .desc {
+body > .services > .my-services > .service > .desc {
   width: 400px;
   font-size: 10px;
   max-width: 100%;
   padding-top: 20px;
 }
-body > .services > .my-services > .row > .service:hover {
+body > .services > .my-services > .service:hover {
   cursor: pointer;
   background-color: var(--primary-color);
 }
@@ -613,18 +611,14 @@ body > .services > .my-services > .row > .service:hover {
   body .services {
     height: 700px;
     width: 100%;
-    margin-top: 120px;
   }
   body .services > h1 {
     font-size: 25px;
   }
   body .services > .my-services {
-    flex-direction: column;
+    grid-template-columns: auto;
   }
-  body .services > .my-services > .row {
-    flex-direction: column;
-  }
-  body .services > .my-services > .row > .service {
+  body .services > .my-services > .service {
     padding-left: 10px;
     padding-top: 20px;
     width: 350px;
@@ -703,7 +697,7 @@ body .testimonials .swiper .swiper-slide > .desc {
 @media (max-width: 768px) {
   body .testimonials {
     height: 650px;
-    margin: 200px auto;
+    margin: 400px auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -719,7 +713,6 @@ body .testimonials .swiper .swiper-slide > .desc {
   }
 }
 body > .education {
-  margin-top: 200px;
   width: 100%;
   height: 1400px;
   background-color: var(--education-bg-color);
@@ -767,7 +760,7 @@ body > .education > .education-content > .element {
   background-color: var(--education-div-bg-color);
   border: 3px solid var(--education-div-border-bg-color);
   border-radius: 10px;
-  height: 150px;
+  height: 190px;
   width: 400px;
   position: relative;
   transition: 0.6s ease;
@@ -801,15 +794,15 @@ body > .education > .education-content > .university {
   left: 420px;
 }
 body > .education > .education-content > .texnoera {
-  bottom: 770px;
+  bottom: 800px;
   left: -20px;
 }
 body > .education > .education-content > .turing {
-  bottom: 700px;
+  bottom: 750px;
   left: 420px;
 }
 body > .education > .education-content > .matrix {
-  bottom: 620px;
+  bottom: 720px;
   left: -20px;
 }
 
@@ -909,6 +902,11 @@ body .contact > form > .leftPart > input {
 }
 body .contact > form > .leftPart > input:focus {
   outline: none;
+}
+body .contact > form > .leftPart > input:focus:invalid {
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
 }
 body .contact > form > .rightPart {
   display: flex;

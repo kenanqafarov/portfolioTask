@@ -55,6 +55,11 @@ body {
           border: 3px solid var(--dot-bg-color);
           &:focus {
             outline: none;
+            &:invalid {
+              border: none;
+              outline: 2px solid red;
+              border-radius: 5px;
+            }
           }
         }
       }

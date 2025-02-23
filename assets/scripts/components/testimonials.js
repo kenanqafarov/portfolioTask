@@ -92,7 +92,7 @@ testimonials.innerHTML = `
               <div class="stars">
                 ${Array(user.stars)
           .fill('<i class="fa-solid fa-star"></i>')
-          .join('')}
+        }
               </div>
               <div class="desc">${user.comment}</div>
             </div>

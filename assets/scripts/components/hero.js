@@ -27,7 +27,7 @@ let social_links = {
   linkedin: "https://www.linkedin.com/in/kenanqafarov",
   github: "https://github.com/kenanqafarov",
   instagram: "https://www.instagram.com/knanqafaro1/",
-  x: "https://x.com/KQafarov83870"
+  twitter: "https://x.com/KQafarov83870"
 
 }
 
