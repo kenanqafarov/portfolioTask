@@ -136,3 +136,55 @@ body {
     }
   }
 }
+
+@media (max-width: 480px) {
+  body {
+    > .education {
+      > .education-content {
+        > .base-line {
+          position: absolute;
+          left: 20px;
+          height: 1100px;
+        }
+        > .dot {
+          left: 15px;
+        }
+        > .first {
+          top: 178px;
+        }
+
+        > .second {
+          top: 456px;
+        }
+        > .third {
+          top: 724px;
+        }
+        > .fourth {
+          top: 1000px;
+        }
+        > .element {
+          left: 30px;
+          width: 285px;
+          height: 230px;
+          > .desc {
+            top: 90px;
+            width: 220px;
+          }
+        }
+        > .university {
+          top: 150px;
+        }
+        > .texnoera {
+          bottom: -140px;
+        }
+        > .matrix {
+          top: -100px;
+        }
+        > .turing {
+          top: 450px;
+        }
+      }
+    }
+  }
+}
+

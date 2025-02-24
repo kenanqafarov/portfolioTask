@@ -51,7 +51,7 @@ contact.innerHTML =
       <input type="text" placeholder="${currentContactData["subject-input"]} " required />
     </div>
     <div class="rightPart">
-      <textarea type="text" placeholder="${currentContactData["message-input"]} "></textarea>
+      <textarea type="text" placeholder="${currentContactData["message-input"]} " required></textarea>
       <button  type="submit">${currentContactData["message-btn"]}  </button>
     </div>
   </form>

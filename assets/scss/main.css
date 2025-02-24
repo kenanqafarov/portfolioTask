@@ -634,6 +634,29 @@ body > .services > .my-services > .row > .service:hover {
     max-width: 100%;
   }
 }
+@media (max-width: 480px) {
+  body .services {
+    height: 1200px;
+    margin-top: -300px;
+    width: 100%;
+  }
+  body .services > h1 {
+    font-size: 25px;
+  }
+  body .services > .my-services {
+    display: flex;
+    flex-direction: column;
+  }
+  body .services > .my-services > .row {
+    flex-direction: column;
+  }
+  body .services > .my-services > .row > .service {
+    padding-left: 10px;
+    padding-top: 20px;
+    width: 300px;
+    max-width: 100%;
+  }
+}
 body .testimonials {
   display: flex;
   align-items: center;
@@ -851,6 +874,49 @@ body > .education > .education-content > .matrix {
     top: 450px;
   }
 }
+@media (max-width: 480px) {
+  body > .education > .education-content > .base-line {
+    position: absolute;
+    left: 20px;
+    height: 1100px;
+  }
+  body > .education > .education-content > .dot {
+    left: 15px;
+  }
+  body > .education > .education-content > .first {
+    top: 178px;
+  }
+  body > .education > .education-content > .second {
+    top: 456px;
+  }
+  body > .education > .education-content > .third {
+    top: 724px;
+  }
+  body > .education > .education-content > .fourth {
+    top: 1000px;
+  }
+  body > .education > .education-content > .element {
+    left: 30px;
+    width: 285px;
+    height: 230px;
+  }
+  body > .education > .education-content > .element > .desc {
+    top: 90px;
+    width: 220px;
+  }
+  body > .education > .education-content > .university {
+    top: 150px;
+  }
+  body > .education > .education-content > .texnoera {
+    bottom: -140px;
+  }
+  body > .education > .education-content > .matrix {
+    top: -100px;
+  }
+  body > .education > .education-content > .turing {
+    top: 450px;
+  }
+}
 body .contact {
   display: flex;
   flex-direction: column;
@@ -941,6 +1007,11 @@ body .contact > form > .rightPart > textarea {
 body .contact > form > .rightPart > textarea:focus {
   outline: none;
 }
+body .contact > form > .rightPart > textarea:focus:invalid {
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
 body .contact > form > .rightPart > button {
   padding: 8px 12px;
   border-radius: 10px;
@@ -975,6 +1046,30 @@ body .contact > form > .rightPart > button:hover {
   body .contact > form > .rightPart > textarea {
     margin: 0 auto;
     min-width: 340px;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body .contact {
+    height: 1300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  body .contact > .map > iframe {
+    width: 100%;
+    height: 200px;
+  }
+  body .contact > form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .contact > form > .leftPart > input {
+    width: 250px;
+  }
+  body .contact > form > .rightPart > textarea {
+    margin: 0 auto;
+    min-width: 250px;
     width: 100%;
   }
 }
