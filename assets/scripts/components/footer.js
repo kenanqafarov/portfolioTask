@@ -26,7 +26,7 @@ footer.innerHTML = `
         <i class="fa-brands fa-${key}"></i>
       </a>`
     )
-  }
+    .join("")}
   </div> 
   <div class="short_cuts">
     ${currentDataHeader.navLinks
@@ -34,11 +34,12 @@ footer.innerHTML = `
       (link) => `
       <a href="${link.href}">${link.text}</a>`
     )
-  }
+    .join("")}
   </div>
   <div class="copy_right">
     &copy;${currentDataFooter.name} &VerticalLine; ${currentDataFooter.status} &VerticalLine; ${year}
   </div>
 `;
+
 
 document.body.appendChild(footer);

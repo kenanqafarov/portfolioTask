@@ -1,12 +1,12 @@
 header {
   .sidebar {
     position: absolute;
-    transform: translateY(-400px);
+    transform: translateY(-600px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 420px;
     width: 100%;
     gap: 6px;
     border-top: 1px solid var(--hire-me-btn-color);

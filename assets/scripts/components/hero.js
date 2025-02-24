@@ -10,7 +10,8 @@ let hero_data = {
     "desc-about-me": "I am a UX/UI designer, IT project manager, startup enthusiast, and IT student, driven by a passion for creating user-centered digital solutions. I enjoy transforming ideas into functional and effective products.",
     "job-title": "I'm a ",
     "hero-buttons": "Hire",
-    "contact-btn": "Contact"
+    "contact-btn": "Contact",
+    "cv-path": "/assets/materials/Qafarov_Kenan_CV_EN.pdf"
   },
   az: {
     "name-title": "Salam! Mən",
@@ -18,18 +19,14 @@ let hero_data = {
     "desc-about-me": "Mən UX/UI dizayner, IT layihə meneceri, startupçı və IT tələbəsiyəm, istifadəçiyə yönəlik rəqəmsal həllər yaratmağa həvəsliyəm. İdeyaları funksional və effektiv məhsullara çevirməkdən zövq alıram.",
     "job-title": "Edirəm: ",
     "hero-buttons": "İş təklifi",
-    "contact-btn": "Əlaqə"
+    "contact-btn": "Əlaqə",
+    "cv-path": "/assets/materials/Qafarov_Kenan_CV_AZ.pdf"
+
   }
 }
 
 
-let social_links = {
-  linkedin: "https://www.linkedin.com/in/kenanqafarov",
-  github: "https://github.com/kenanqafarov",
-  instagram: "https://www.instagram.com/knanqafaro1/",
-  twitter: "https://x.com/KQafarov83870"
 
-}
 
 
 let currentDataHero = hero_data[currentLanguageState.toLocaleLowerCase()]
@@ -61,13 +58,13 @@ hero.innerHTML =
           <a href="${social_links.instagram}" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="${social_links.x}" target="_blank">
+          <a href="${social_links.twitter}" target="_blank">
             <i class="fa-brands fa-square-x-twitter"></i>
           </a>
         </div>
         
         <div class="hero-buttons">
-          <a class="hire-btn" target="_blank"  href="${social_links.linkedin}">
+          <a type="download" class="hire-btn" target="_blank"  href="${currentDataHero["cv-path"]}">
             ${currentDataHero["hero-buttons"]}
           </a>
           <a class="contact-btn" href="#contact">${currentDataHero["contact-btn"]}</a>

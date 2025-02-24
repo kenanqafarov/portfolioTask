@@ -162,12 +162,12 @@
 
 header .sidebar {
   position: absolute;
-  transform: translateY(-400px);
+  transform: translateY(-600px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 420px;
   width: 100%;
   gap: 6px;
   border-top: 1px solid var(--hire-me-btn-color);
@@ -575,14 +575,18 @@ body > .services > h1 {
   margin-bottom: 40px;
 }
 body > .services > .my-services {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  row-gap: 10px;
+  flex-direction: column;
+  gap: 20px;
 }
-body > .services > .my-services > .service {
+body > .services > .my-services > .row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+body > .services > .my-services > .row > .service {
   width: 500px;
   height: 220px;
   padding-top: 20px;
@@ -592,33 +596,38 @@ body > .services > .my-services > .service {
   border: 3px solid var(--pfp-bg-shadow);
   transition: 0.4s ease;
 }
-body > .services > .my-services > .service > .title {
+body > .services > .my-services > .row > .service > .title {
   font-size: 18px;
   font-weight: 600;
 }
-body > .services > .my-services > .service > .desc {
+body > .services > .my-services > .row > .service > .desc {
   width: 400px;
   font-size: 10px;
   max-width: 100%;
   padding-top: 20px;
 }
-body > .services > .my-services > .service:hover {
+body > .services > .my-services > .row > .service:hover {
   cursor: pointer;
   background-color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
   body .services {
-    height: 700px;
+    height: 1200px;
+    margin-top: -300px;
     width: 100%;
   }
   body .services > h1 {
     font-size: 25px;
   }
   body .services > .my-services {
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
   }
-  body .services > .my-services > .service {
+  body .services > .my-services > .row {
+    flex-direction: column;
+  }
+  body .services > .my-services > .row > .service {
     padding-left: 10px;
     padding-top: 20px;
     width: 350px;
@@ -790,7 +799,7 @@ body > .education > .education-content > .element > .date {
   left: 10px;
 }
 body > .education > .education-content > .university {
-  bottom: 870px;
+  bottom: 820px;
   left: 420px;
 }
 body > .education > .education-content > .texnoera {
@@ -798,11 +807,11 @@ body > .education > .education-content > .texnoera {
   left: -20px;
 }
 body > .education > .education-content > .turing {
-  bottom: 750px;
+  bottom: 790px;
   left: 420px;
 }
 body > .education > .education-content > .matrix {
-  bottom: 720px;
+  bottom: 760px;
   left: -20px;
 }
 
@@ -833,13 +842,13 @@ body > .education > .education-content > .matrix {
     top: 150px;
   }
   body > .education > .education-content > .texnoera {
-    bottom: -200px;
+    bottom: -140px;
   }
   body > .education > .education-content > .matrix {
-    top: 50px;
+    top: -30px;
   }
   body > .education > .education-content > .turing {
-    top: 500px;
+    top: 450px;
   }
 }
 body .contact {
@@ -1042,6 +1051,14 @@ footer > .copy_right {
   footer > .short_cuts > a {
     font-weight: 400;
     font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    width: 100%;
+  }
+  footer > .short_cuts {
+    gap: 2px;
   }
 }
 @keyframes blink {

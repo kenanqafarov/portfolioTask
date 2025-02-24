@@ -76,3 +76,11 @@ footer {
     }
   }
 }
+@media (max-width: 480px) {
+  footer {
+    width: 100%;
+    > .short_cuts {
+      gap: 2px;
+    }
+  }
+}

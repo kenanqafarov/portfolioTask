@@ -14,34 +14,38 @@ body {
       // justify-content: center;
       // align-items: center;
       // flex-direction: column;
-      display: grid;
-      grid-template-columns: auto auto;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      column-gap: 10px;
-      row-gap: 10px;
-
-      > .service {
-        width: 500px;
-        height: 220px;
-        padding-top: 20px;
-        padding-left: 20px;
-        background-color: var(--pfp-bg-shadow);
-        border-radius: 20px;
-        border: 3px solid var(--pfp-bg-shadow);
-        transition: 0.4s ease;
-        > .title {
-          font-size: 18px;
-          font-weight: 600;
-        }
-        > .desc {
-          width: 400px;
-          font-size: 10px;
-          max-width: 100%;
+      flex-direction: column;
+      gap: 20px;
+      > .row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        > .service {
+          width: 500px;
+          height: 220px;
           padding-top: 20px;
-        }
-        &:hover {
-          cursor: pointer;
-          background-color: var(--primary-color);
+          padding-left: 20px;
+          background-color: var(--pfp-bg-shadow);
+          border-radius: 20px;
+          border: 3px solid var(--pfp-bg-shadow);
+          transition: 0.4s ease;
+          > .title {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          > .desc {
+            width: 400px;
+            font-size: 10px;
+            max-width: 100%;
+            padding-top: 20px;
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: var(--primary-color);
+          }
         }
       }
     }
@@ -51,18 +55,24 @@ body {
 @media (max-width: 768px) {
   body {
     .services {
-      height: 700px;
+      height: 1200px;
+      margin-top: -300px;
       width: 100%;
       > h1 {
         font-size: 25px;
       }
       > .my-services {
-        grid-template-columns: auto;
-        > .service {
-          padding-left: 10px;
-          padding-top: 20px;
-          width: 350px;
-          max-width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        > .row {
+          flex-direction: column;
+          > .service {
+            padding-left: 10px;
+            padding-top: 20px;
+            width: 350px;
+            max-width: 100%;
+          }
         }
       }
     }
